@@ -1,0 +1,40 @@
+* {
+	background-image: url("corey-hearne-348666-unsplash.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	font-family: "Brush Script MT", cursive;
+	font-size: 30px;
+}
+h1 {
+	float: center;
+	text-align: center;
+	font-size: 40px;
+}
+.footer {
+	float: center;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.button {
+    background-color: #6a6a6a;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+	border-radius: 12px;
+}

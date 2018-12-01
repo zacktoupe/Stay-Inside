@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<!-- The purpose of this site is to encourage the users to stay inside on a bad day. -->
+<!-- It will pick a movie for you -->
+<!-- It will suggest an activity for you to do inside -->
+<!-- It suggests a type of cuisine for the user to have-->
+<head>
+	<title>Just Stay Inside</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png"  href="door.png">
+		<script>
+			var funThings = [
+			'Blanket Fort',
+			'Draw or Doodle',
+			'The Floor is Lava',
+			'Board Game Night',
+			'Bubble Bath',
+			'Hot Cocoa/Coffee/Tea Party',
+			'Cook or Bake',
+			'Code Something Fun'
+			]
+			
+			var foodTypes = [
+			'Japanese',
+			'Chinese',
+			'Mexican',
+			'Indian',
+			'Greek',
+			'Mediterrenean',
+			'Italian',
+			'Spanish',
+			'Korean',
+			'American'
+			]
+			
+			var movieGenres = [
+			'Horror',
+			'Action',
+			'Drama',
+			'Fantasy',
+			'Adventure',
+			'Mystery',
+			'Thriller',
+			'War',
+			'Crime',
+			'Romance',
+			'Superhero',
+			'Romcom',
+			'Documentary',
+			'Sci-fi',
+			'Disaster',
+			'Comedy',
+			'Musical'
+			]
+		
+			function activity() {
+				var randomNumber = Math.floor(Math.random() * (funThings.length));
+				activityDisplay.innerHTML = funThings[randomNumber];
+			}
+			function food() {
+				var randomNumber1 = Math.floor(Math.random() * (foodTypes.length));
+				foodDisplay.innerHTML = foodTypes[randomNumber1];
+			}
+			
+		
+			function movie() {
+				var randomNumber2 = Math.floor(Math.random() * (movieGenres.length));
+				movieDisplay.innerHTML = movieGenres[randomNumber2];
+}
+		
+		</script>
+</head>
+<!-- the body section -->
+<body>
+<main>
+	<h1>I'd rather stay inside. Wouldn't you?</h1>
+	
+	<div class="row">
+		<!-- This part will suggest an idea -->
+		
+		<div class="column">
+			<h2>Bored?</h2>
+			<button class="button" onclick="activity()">Activity Picker</button>
+			<p id="activityDisplay">An activity will appear here</p>
+		</div>
+		
+		<div class="column">
+			<h2>Hungry?</h2>
+			<button class="button" onclick="food()">Food Finder</button>
+			<p id="foodDisplay">A Type of cuisine will appear here</p>
+		</div>
+		
+		<div class="column">
+			<h2>Watch to Something?</h2>
+			<button class="button" onclick="movie()">Movie Finder</button>
+			<p id="movieDisplay">A Movie Genre will appear here</p>
+		</div>
+	
+	</div>
+</main>
+<div class="footer">Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+</body>
+</html>
